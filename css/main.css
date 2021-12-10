@@ -91,3 +91,31 @@
 #main .section#footer p { margin: 10px 0; }
 
 #main .section#footer p strong { font-weight: 500; color: #111; }
+
+#fp-nav { -webkit-transition: 0.5s ease-in-out 0.5s; transition: 0.5s ease-in-out 0.5s; }
+
+#fp-nav.last { right: -300px; }
+
+#fp-nav ul li { display: block; width: 30px; height: 30px; position: relative; margin: 20px 10px; }
+
+#fp-nav ul li a { display: block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-decoration: none; }
+
+#fp-nav ul li a::before { content: ""; display: block; width: 140px; height: 100%; position: absolute; right: 0; top: 0; }
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span { height: 4px; width: 4px; margin: -2px 0 0 -2px; border-radius: 100%; }
+
+#fp-nav ul li a.active span::before { -webkit-transform: scale(1); transform: scale(1); }
+
+#fp-nav ul li a span { border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #fff; left: 50%; top: 50%; margin: -2px 0 0 -2px; -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+
+#fp-nav ul li a span::before { content: ""; display: block; width: 30px; height: 30px; border-radius: 100%; border: 2px solid #fff; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transform: scale(0); transform: scale(0); -webkit-transition: 0.25s; transition: 0.25s; }
+
+#fp-nav ul li:hover a span { width: 4px; height: 4px; margin: -2px 0px 0px -2px; }
+
+#fp-nav ul li .fp-tooltip { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); color: #fff; font-size: 14px; font-family: "Raleway", "Noto Sans KR", sans-serif; font-weight: 500; white-space: nowrap; max-width: 220px; overflow: hidden; display: block; opacity: 0.5; width: auto; cursor: pointer; }
+
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip { -webkit-transition: opacity 0.2s ease-in; transition: opacity 0.2s ease-in; width: auto; opacity: 1; }
+
+#fp-nav ul li .fp-tooltip.fp-right { right: 50px; }
+
+#fp-nav ul li .fp-tooltip.fp-left { left: 20px; }

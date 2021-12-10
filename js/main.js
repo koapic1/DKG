@@ -42,8 +42,14 @@ communityTl
 
 $("#main").fullpage({
     //scrollBar: true,
+    navigation: true,
+    navigationTooltips: ["INTRODUCE", "BUSINESS", "PORTFOLIO", "COMMUNITY"],
+    showActiveTooltip: true,
+
     onLeave: function (origin, destination, direction) {
         const leavingSection = this;
+        const last = $("#fp-nav");
+        //console.log(direction);
         switch (destination.index) {
             case 0:
                 happenTL.restart();
@@ -55,8 +61,14 @@ $("#main").fullpage({
                 portfolioTL.restart();
                 break;
             case 3:
-                communityTl.restart();
+                if (direction === "down") {
+                    communityTl.restart();
+                } else {
+                    last.removeClass("last");
+                }
                 break;
+            case 4:
+                last.addClass("last");
             default:
                 console.log("end");
         }
@@ -88,3 +100,5 @@ const portfolioSlider = new Swiper("#portfolio .mask", {
         clickable: true,
     },
 });
+
+$("#fp-nav li:last-child").remove();
