@@ -1,0 +1,223 @@
+@import "vars";
+@import "mixins";
+
+.titleBox {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    h2 {
+        font-size: 24px;
+        margin-bottom: 50px;
+    }
+    p {
+        font-size: 48px;
+        line-height: 1.2;
+        font-weight: 300;
+        strong {
+            font-weight: 700;
+            position: relative;
+            text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                left: -10px;
+                right: -10px;
+                height: 10px;
+                bottom: 10px;
+                transform-origin: 0 50%;
+                border-radius: 100px;
+                transform: 0 50%;
+                z-index: -1;
+            }
+        }
+    }
+}
+#happen .titleBox strong::after {
+    background-color: #f00;
+}
+#business .titleBox strong::after {
+    background-color: darkblue;
+}
+#portfolio .titleBox strong::after {
+    background-color: darkgoldenrod;
+}
+#community .titleBox strong::after {
+    background-color: darkgreen;
+}
+
+#main {
+    .section {
+        background-size: cover;
+        background-position: 50%;
+        color: #fff;
+        &#happen {
+            position: relative;
+            video {
+                position: absolute;
+                z-index: -1;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                object-fit: cover;
+            }
+        }
+        &#business {
+            background-image: url("../images/main/bgBusiness.jpg");
+            .listBox {
+                margin-top: 80px;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    li a {
+                        width: 300px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        .icon {
+                            width: 150px;
+                            height: 150px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            background: rgba(255, 255, 255, 0.5);
+                            border-radius: 100%;
+                        }
+                        .txt {
+                            width: 200px;
+                            dt {
+                                margin: 30px 0;
+                                font-size: 20px;
+                                font-weight: 500;
+                            }
+                            dd {
+                                line-height: 1.5;
+                                word-break: keep-all;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#portfolio {
+            background-image: url("../images/main/bgPortfolio.png");
+            .listBox {
+                margin: 50px auto;
+                width: 1350px;
+                position: relative;
+                button {
+                    position: absolute;
+                    top: 35%;
+                    span {
+                        color: #fff;
+                        font-size: 48px;
+                    }
+                    &.prev {
+                        left: 0;
+                    }
+                    &.next {
+                        right: 0;
+                    }
+                }
+                .pagination {
+                    text-align: center;
+                    margin-top: 50px;
+                    .swiper-pagination-bullet {
+                        width: 14px;
+                        height: 14px;
+                        opacity: 1;
+                        background-color: transparent;
+                        border: 4px solid #fff;
+                        &-active {
+                            background-color: #fff;
+                        }
+                    }
+                }
+                .mask {
+                    width: 1200px;
+                    margin: auto;
+                    overflow: hidden;
+                }
+                li {
+                    &:hover .img:after {
+                        border-width: 10px;
+                    }
+                    .img {
+                        position: relative;
+                        &:after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            border: 0 solid #fff;
+                            transition: 0.25s ease;
+                        }
+                    }
+                    img {
+                        width: 100%;
+                        height: 250px;
+                        object-fit: cover;
+                    }
+                    p {
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+        &#community {
+            background-image: url("../images/main/bgCommunity.jpg");
+            .listBox {
+                margin-top: 50px;
+                ul {
+                    display: flex;
+                    justify-content: center;
+                    li {
+                        margin: 0 10px;
+                        a {
+                            display: flex;
+                            height: 60px;
+                            justify-content: center;
+                            align-items: center;
+                            width: 200px;
+                            border: 2px solid #fff;
+                            border-radius: 100px;
+                            transition: 0.25s;
+                            &:hover {
+                                background-color: #fff;
+                                color: #111;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#footer {
+            background-color: #fff;
+            color: #666;
+            text-align: center;
+            padding: 50px 0;
+            .title {
+                font-size: 18px;
+            }
+            .address {
+                margin: 20px 0;
+            }
+            .copyright {
+                font-size: 14px;
+            }
+            p {
+                margin: 10px 0;
+                strong {
+                    font-weight: 500;
+                    color: #111;
+                }
+            }
+        }
+    }
+}
