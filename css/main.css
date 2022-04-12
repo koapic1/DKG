@@ -6,7 +6,7 @@
 
 .titleBox p strong { font-weight: 700; position: relative; text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2); }
 
-.titleBox p strong:after { content: ""; display: block; position: absolute; left: -10px; right: -10px; height: 10px; bottom: 10px; -webkit-transform-origin: 0 50%; transform-origin: 0 50%; border-radius: 100px; -webkit-transform: 0 50%; transform: 0 50%; z-index: -1; }
+.titleBox p strong:after { content: ""; display: block; position: absolute; left: -10px; right: -10px; height: 10px; bottom: 10px; transform-origin: 0 50%; border-radius: 100px; transform: 0 50%; z-index: -1; }
 
 #happen .titleBox strong::after { background-color: #f00; }
 
@@ -20,17 +20,17 @@
 
 #main .section#happen { position: relative; }
 
-#main .section#happen video { position: absolute; z-index: -1; width: 100%; height: 100%; left: 0; top: 0; -o-object-fit: cover; object-fit: cover; }
+#main .section#happen video { position: absolute; z-index: -1; width: 100%; height: 100%; left: 0; top: 0; object-fit: cover; }
 
 #main .section#business { background-image: url("../images/main/bgBusiness.jpg"); }
 
 #main .section#business .listBox { margin-top: 80px; }
 
-#main .section#business .listBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#main .section#business .listBox ul { display: flex; justify-content: center; }
 
-#main .section#business .listBox ul li a { width: 300px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+#main .section#business .listBox ul li a { width: 300px; text-align: center; display: flex; flex-direction: column; align-items: center; }
 
-#main .section#business .listBox ul li a .icon { width: 150px; height: 150px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; background: rgba(255, 255, 255, 0.5); border-radius: 100%; }
+#main .section#business .listBox ul li a .icon { width: 150px; height: 150px; display: flex; justify-content: center; align-items: center; background: rgba(255, 255, 255, 0.5); border-radius: 100%; }
 
 #main .section#business .listBox ul li a .txt { width: 200px; }
 
@@ -62,9 +62,9 @@
 
 #main .section#portfolio .listBox li .img { position: relative; }
 
-#main .section#portfolio .listBox li .img:after { content: ""; display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 0; border: 0 solid #fff; -webkit-transition: 0.25s ease; transition: 0.25s ease; }
+#main .section#portfolio .listBox li .img:after { content: ""; display: block; position: absolute; left: 0; top: 0; right: 0; bottom: 0; border: 0 solid #fff; transition: 0.25s ease; }
 
-#main .section#portfolio .listBox li img { width: 100%; height: 250px; -o-object-fit: cover; object-fit: cover; }
+#main .section#portfolio .listBox li img { width: 100%; height: 250px; object-fit: cover; }
 
 #main .section#portfolio .listBox li p { text-align: center; margin-top: 30px; }
 
@@ -72,11 +72,11 @@
 
 #main .section#community .listBox { margin-top: 50px; }
 
-#main .section#community .listBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#main .section#community .listBox ul { display: flex; justify-content: center; }
 
 #main .section#community .listBox ul li { margin: 0 10px; }
 
-#main .section#community .listBox ul li a { display: -webkit-box; display: -ms-flexbox; display: flex; height: 60px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 200px; border: 2px solid #fff; border-radius: 100px; -webkit-transition: 0.25s; transition: 0.25s; }
+#main .section#community .listBox ul li a { display: flex; height: 60px; justify-content: center; align-items: center; width: 200px; border: 2px solid #fff; border-radius: 100px; transition: 0.25s; }
 
 #main .section#community .listBox ul li a:hover { background-color: #fff; color: #111; }
 
@@ -92,7 +92,7 @@
 
 #main .section#footer p strong { font-weight: 500; color: #111; }
 
-#fp-nav { -webkit-transition: 0.5s ease-in-out 0.5s; transition: 0.5s ease-in-out 0.5s; }
+#fp-nav { transition: 0.5s ease-in-out 0.5s; }
 
 #fp-nav.last { right: -300px; }
 
@@ -104,17 +104,17 @@
 
 #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span { height: 4px; width: 4px; margin: -2px 0 0 -2px; border-radius: 100%; }
 
-#fp-nav ul li a.active span::before { -webkit-transform: scale(1); transform: scale(1); }
+#fp-nav ul li a.active span::before { transform: scale(1); }
 
-#fp-nav ul li a span { border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #fff; left: 50%; top: 50%; margin: -2px 0 0 -2px; -webkit-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out; }
+#fp-nav ul li a span { border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #fff; left: 50%; top: 50%; margin: -2px 0 0 -2px; transition: all 0.1s ease-in-out; }
 
-#fp-nav ul li a span::before { content: ""; display: block; width: 30px; height: 30px; border-radius: 100%; border: 2px solid #fff; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; -webkit-box-sizing: border-box; box-sizing: border-box; -webkit-transform: scale(0); transform: scale(0); -webkit-transition: 0.25s; transition: 0.25s; }
+#fp-nav ul li a span::before { content: ""; display: block; width: 30px; height: 30px; border-radius: 100%; border: 2px solid #fff; position: absolute; left: 50%; top: 50%; margin: -15px 0 0 -15px; box-sizing: border-box; transform: scale(0); transition: 0.25s; }
 
 #fp-nav ul li:hover a span { width: 4px; height: 4px; margin: -2px 0px 0px -2px; }
 
-#fp-nav ul li .fp-tooltip { position: absolute; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); color: #fff; font-size: 14px; font-family: "Raleway", "Noto Sans KR", sans-serif; font-weight: 500; white-space: nowrap; max-width: 220px; overflow: hidden; display: block; opacity: 0.5; width: auto; cursor: pointer; }
+#fp-nav ul li .fp-tooltip { position: absolute; top: 50%; transform: translateY(-50%); color: #fff; font-size: 14px; font-family: "Raleway", "Noto Sans KR", sans-serif; font-weight: 500; white-space: nowrap; max-width: 220px; overflow: hidden; display: block; opacity: 0.5; width: auto; cursor: pointer; }
 
-#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip { -webkit-transition: opacity 0.2s ease-in; transition: opacity 0.2s ease-in; width: auto; opacity: 1; }
+#fp-nav ul li:hover .fp-tooltip, #fp-nav.fp-show-active a.active + .fp-tooltip { transition: opacity 0.2s ease-in; width: auto; opacity: 1; }
 
 #fp-nav ul li .fp-tooltip.fp-right { right: 50px; }
 
